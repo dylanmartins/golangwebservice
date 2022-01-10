@@ -1,0 +1,69 @@
+# LIST
+
+package main
+
+import "fmt"
+
+func main() {
+	arr := [3]int{1, 2, 3}
+	fmt.Println(arr[2])
+}
+
+# SLICES
+
+package main
+
+import "fmt"
+
+func main() {
+	slice := []int{1, 2, 3}
+	fmt.Println(slice)
+
+	slice = append(slice, 4, 45, 27)
+	fmt.Println(slice)
+}
+
+# MAPS
+
+package main
+
+import "fmt"
+
+func main() {
+	m := map[string]int{"foo": 42}
+	fmt.Println(m)
+	fmt.Println(m["foo"])
+
+	m["foo"] = 27
+	fmt.Println(m)
+
+	delete(m, "foo")
+	fmt.Println(m)
+}
+
+# STRUCT
+
+package main
+
+import "fmt"
+
+func main() {
+	type user struct {
+		ID        int
+		FirstName string
+		LastName  string
+	}
+
+	var u user
+	u.ID = 666
+	u.FirstName = "Dylan"
+	u.LastName = "Andrade"
+	fmt.Println(u)
+
+	u2 := user{
+		ID:        1,
+		FirstName: "dylan2",
+		LastName:  "Andrade",
+	}
+	fmt.Println(u2)
+}
